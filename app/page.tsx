@@ -3,10 +3,12 @@ import { AuthorPortrait } from "@/components/AuthorPortrait";
 import { KnowledgeLayers } from "@/components/HomeVisuals";
 import { SectionHeader, WorkCard } from "@/components/Primitives";
 import { work } from "@/src/data/work";
+import { posts } from "@/src/data/writing";
 
 const lifecycle = ["Expression", "Delegation", "Context", "Reasoning", "Action Gate", "Standing", "Runtime", "Revalidation", "Consequence", "Receipts", "Memory"];
 
 export default function Home() {
+  const featuredWriting = posts.filter((post) => post.featured).slice(0, 3);
   return (
     <main>
       <section className="container grid gap-12 py-20 md:py-28 lg:grid-cols-[1.18fr_.72fr] lg:items-center">
@@ -75,12 +77,15 @@ export default function Home() {
             <SectionHeader eyebrow="Things I Noticed" title="Observations before they become systems." intro="Short field notes, analogies, and thought experiments about agency, delegation, memory, behavior, and coordination." />
             <Link href="/writing" className="text-link text-sm">Browse the archive →</Link>
           </div>
-          <Link href="/writing/the-ant-trail" className="surface-card group relative p-7 md:p-10">
-            <p className="eyebrow">Sample / draft · Field note</p>
-            <h3 className="mt-8 font-serif text-4xl font-medium tracking-[-.04em] group-hover:text-[#a94f2d]">The Ant Trail</h3>
-            <p className="mt-5 max-w-xl leading-8 text-[#68736e]">A short field note about obstacles, adaptation, and the difference between following a pattern and authorizing a decision.</p>
-            <span className="mt-8 inline-block text-sm">Read the note →</span>
-          </Link>
+          <div className="divide-y hairline border-y hairline">
+            {featuredWriting.map((post, index) => (
+              <Link href={"/writing/" + post.slug} className="group grid gap-3 py-6 sm:grid-cols-[2.5rem_1fr_auto] sm:items-start" key={post.slug}>
+                <span className="font-mono text-xs text-[#a94f2d]">0{index + 1}</span>
+                <div><h3 className="font-serif text-2xl font-medium tracking-[-.03em] group-hover:text-[#a94f2d]">{post.title}</h3><p className="mt-2 max-w-xl text-sm leading-6 text-[#68736e]">{post.description}</p></div>
+                <span className="text-sm transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
