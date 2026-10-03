@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AuthorPortrait } from "@/components/AuthorPortrait";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About",
@@ -21,7 +22,7 @@ export default function AboutPage() {
       <section className="container py-20 md:py-28">
         <div className="grid gap-14 lg:grid-cols-[.72fr_1.28fr] lg:items-start">
           <AuthorPortrait variant="profile" className="mx-auto lg:mx-0" />
-          <div><p className="eyebrow">About Michael Bower</p><h1 className="mt-5 max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-.055em] md:text-7xl">Independent research and building around human agency.</h1><div className="prose-custom mt-10 text-lg"><p>I am an independent researcher and builder focused on human agency, AI systems, delegated authority, memory, alignment, and agent governance.</p><p>My path into AI came through broader questions about human agency and alignment rather than traditional AI research. Those conceptual questions gradually developed into implemented agent-governance architecture.</p><p>The focus today is increasingly on delegated AI systems, memory, authority continuity, execution boundaries, and how increasingly capable personal agents can reduce human cognitive load without quietly replacing human decision-making.</p></div></div>
+          <div><p className="eyebrow">About Michael Bower</p><h1 className="mt-5 max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-.055em] md:text-7xl">Independent research and building around human agency.</h1><div className="prose-custom mt-10 text-lg"><p>I am an independent researcher and builder focused on human agency, AI systems, delegated authority, memory, alignment, and agent governance.</p><p>My path into AI came through broader questions about human agency and alignment rather than traditional AI research. Those conceptual questions gradually developed into implemented agent-governance architecture.</p><p>The focus today is increasingly on delegated AI systems, memory, authority continuity, execution boundaries, and how increasingly capable personal agents can reduce human cognitive load without quietly replacing human decision-making.</p></div><div className="mt-10 border-t hairline pt-6"><p className="eyebrow mb-4">Elsewhere</p><SocialLinks className="text-[#58645e]" /></div></div>
         </div>
       </section>
       <section className="border-y hairline bg-[#e9eee9] py-20">

@@ -12,6 +12,10 @@ export const siteConfig = {
   // One high-resolution vertical image will supply hero, profile, and avatar crops.
   authorImage: null as string | null,
   authorImagePosition: "50% 35%",
+  social: {
+    github: "https://github.com/mnbower-research",
+    linkedin: "https://www.linkedin.com/in/michael-bower-b03b78407/",
+  },
   // Set this after a production domain has been purchased. No URL is emitted while null.
   baseUrl: null as string | null,
 };

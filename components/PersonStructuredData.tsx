@@ -10,6 +10,10 @@ export function PersonStructuredData() {
     image: siteConfig.authorImage && siteConfig.baseUrl
       ? new URL(siteConfig.authorImage, siteConfig.baseUrl).toString()
       : undefined,
+    sameAs: [
+      siteConfig.social.github,
+      siteConfig.social.linkedin,
+    ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export function SiteFooter() {
   return (
@@ -8,6 +9,7 @@ export function SiteFooter() {
           <p className="font-semibold">Michael Bower</p>
           <p className="mt-2 text-sm text-[#68736e]">Human Agency Infrastructure</p>
           <p className="mt-6 max-w-lg text-sm leading-6 text-[#68736e]">Research and engineering for preserving human agency in increasingly capable systems.</p>
+          <SocialLinks className="mt-6 text-[#58645e]" />
         </div>
         <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-[#58645e] md:justify-self-end">
           <Link className="hover:text-[#a94f2d]" href="/research">Research</Link>
