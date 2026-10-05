@@ -138,7 +138,7 @@ export default function ICTFPage() {
       <section className="bg-[#17201d] py-20 text-white md:py-24">
         <div className="container grid gap-10 lg:grid-cols-[.6fr_1.4fr]">
           <div><p className="eyebrow !text-[#d68b67]">Active research</p><h2 className="mt-4 text-4xl font-semibold tracking-[-.04em]">Current Status</h2></div>
-          <div className="space-y-6 text-lg leading-8 text-[#bdc9c1]"><p>ICTF v1.2.1 is frozen as the pre-experiment technical version. The first 720,000-episode synthetic adaptive-search benchmark is complete. The preregistered H4 increasing-hazard hypothesis was not supported.</p><p>Post-result analysis identified a stronger research direction involving search policy, feedback, error-region geometry, and temporal reachability. The next experimental phase will evaluate AGS components individually and in combination.</p><p className="text-sm">Planned ablations: AAG, PGDL + AAG, Runtime Binding, and fuller AGS configurations. No AGS benchmark results are available yet.</p></div>
+          <div className="space-y-6 text-lg leading-8 text-[#bdc9c1]"><p>ICTF v1.2.1 is frozen as the pre-experiment technical version. The first 720,000-episode synthetic adaptive-search benchmark is complete. The preregistered H4 increasing-hazard hypothesis was not supported.</p><p>Post-result analysis identified a more specific research direction involving search policy, feedback, error-region geometry, and temporal reachability. The next experimental phase will evaluate AGS components individually and in combination.</p><p className="text-sm">Planned ablations: AAG, PGDL + AAG, Runtime Binding, and fuller AGS configurations. No AGS benchmark results are available yet.</p></div>
         </div>
       </section>
 
