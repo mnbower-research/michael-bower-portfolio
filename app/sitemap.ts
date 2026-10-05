@@ -5,7 +5,7 @@ import { posts } from "@/src/data/writing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!siteConfig.baseUrl) return [];
-  const routes = ["", "/research", "/research/alignment-theory", "/research/human-agency-infrastructure", "/projects", "/writing", "/about"];
+  const routes = ["", "/research", "/research/ictf", "/research/alignment-theory", "/research/human-agency-infrastructure", "/projects", "/writing", "/about"];
   return [
     ...routes.map((path) => ({ url: new URL(path || "/", siteConfig.baseUrl as string).toString() })),
     ...work.map((item) => ({ url: new URL("/projects/" + item.slug, siteConfig.baseUrl as string).toString() })),

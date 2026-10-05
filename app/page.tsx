@@ -4,6 +4,7 @@ import { KnowledgeLayers } from "@/components/HomeVisuals";
 import { SectionHeader, WorkCard } from "@/components/Primitives";
 import { work } from "@/src/data/work";
 import { posts } from "@/src/data/writing";
+import { ICTFCard } from "@/components/ictf/ICTFCard";
 
 const lifecycle = ["Expression", "Delegation", "Context", "Reasoning", "Action Gate", "Standing", "Runtime", "Revalidation", "Consequence", "Receipts", "Memory"];
 
@@ -33,9 +34,10 @@ export default function Home() {
       </section>
 
       <section className="container py-20 md:py-24">
-        <SectionHeader eyebrow="Current work" title="A connected body of research." intro="Conceptual foundations, an umbrella research program, implemented governance architecture, and experimental work on memory." />
+        <SectionHeader eyebrow="Current work" title="A connected body of research." intro="Conceptual foundations, an umbrella research program, implemented governance architecture, independent measurement, and experimental work on memory." />
         <div className="grid gap-4 md:grid-cols-2">
           {work.map((item, index) => <WorkCard key={item.slug} item={item} featured={index === 0} />)}
+          <ICTFCard />
         </div>
       </section>
 

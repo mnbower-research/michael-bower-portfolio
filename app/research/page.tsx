@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeader, StatusBadge } from "@/components/Primitives";
 import { researchAreas } from "@/src/data/research";
+import { ICTFCard } from "@/components/ictf/ICTFCard";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -13,6 +14,7 @@ const foundationLinks: Record<string, string> = {
   "Human Agency Infrastructure": "/research/human-agency-infrastructure",
   "Alignment Governance Stack": "/projects/alignment-governance-stack",
   "Governance Memory / Internalization": "/projects/governance-memory",
+  "Invariant-Constrained Transition Framework": "/research/ictf",
 };
 
 export default function ResearchPage() {
@@ -25,7 +27,7 @@ export default function ResearchPage() {
       </section>
 
       <section className="container pb-20">
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-2">
           {[
             ["01 · Conceptual foundation", "Alignment Theory", "How systems distort when relationships depart from load-bearing constraints.", "/research/alignment-theory", "Conceptual"],
             ["02 · Research program", "Human Agency Infrastructure", "The umbrella program connecting human agency to increasingly capable systems.", "/research/human-agency-infrastructure", "Active Research"],
@@ -38,6 +40,7 @@ export default function ResearchPage() {
               <div className="mt-auto pt-8"><StatusBadge>{status}</StatusBadge></div>
             </Link>
           ))}
+          <ICTFCard />
         </div>
       </section>
 
